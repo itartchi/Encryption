@@ -444,7 +444,7 @@ void main() {
     char outputString[STR_SIZE];
     int convertedString[STR_SIZE];
     int strLength;
-    int key[2][2]={4,3,3,2};
+    int key[2][2]={2,1,1,1};
     int plainText[2][STR_SIZE];
     int cipherText[2][STR_SIZE];
     int convertedText[STR_SIZE];
