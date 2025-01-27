@@ -438,13 +438,12 @@ int changeLetter(int letter){
     }
 }
 
-void main() {
-    //Variable Declaration
+void main(){
     char inputString[STR_SIZE];
     char outputString[STR_SIZE];
     int convertedString[STR_SIZE];
     int strLength;
-    int key[2][2]={4,3,3,2};
+    int inv[2][2]={1,-1,-1,2};
     int plainText[2][STR_SIZE];
     int cipherText[2][STR_SIZE];
     int convertedText[STR_SIZE];
@@ -492,7 +491,7 @@ void main() {
         for(int j=0;j<column;j++){
             cipherText[i][j]=0;
             for(int k=0; k<KEY_SIZE;k++){
-            cipherText[i][j] += key[i][k]*plainText[k][j];
+            cipherText[i][j] += inv[i][k]*plainText[k][j];
             }
         }
    }
@@ -514,11 +513,21 @@ void main() {
         c2++;
     }
 
+    //Modulus of array
+    for (int i = 0; convertedText[i]!=0; i++)
+    {
+        if(convertedText[i]<0){
+            convertedText[i]= convertedText[i]*-1;
+        }
+    }
+
     //checking Remainder of cipher text array
     printf("\nThe converted 1D array is:\n");
     for (int i = 0; convertedText[i]!=0; i++)
     {
-        convertedText[i]= convertedText[i]%52;
+        if(convertedText[i]>52){
+            convertedText[i]= convertedText[i]%52;
+        }
         printf("%d ",convertedText[i]);
     }
 
