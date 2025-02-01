@@ -215,6 +215,82 @@ int changeNum(char letter){
         return 52;
         break;
 
+    case '0':
+        return 53;
+        break;
+
+    case '1':
+        return 54;
+        break;
+
+    case '2':
+        return 55;
+        break;
+
+    case '3':
+        return 56;
+        break;
+
+    case '4':
+        return 57;
+        break;
+
+    case '5':
+        return 58;
+        break;
+
+    case '6':
+        return 59;
+        break;
+
+    case '7':
+        return 60;
+        break;
+
+       case '8':
+        return 61;
+        break;
+
+    case '9':
+        return 62;
+        break;
+
+    case ' ':
+        return 63;
+        break;
+
+    case '!':
+        return 64;
+        break;
+
+    case '#':
+        return 65;
+        break;
+
+    case '%':
+        return 66;
+        break;
+
+    case '?':
+        return 67;
+        break;
+
+    case '@':
+        return 68;
+        break;
+
+    case '(':
+        return 69;
+        break;
+
+    case ')':
+        return 70;
+        break;
+
+    case '.':
+        return 71;
+        break;
+
     default:
         return 0;
         break;
@@ -432,11 +508,99 @@ int changeLetter(int letter){
         return 'Z';
         break;
 
+    case 53:
+        return '0';
+        break;
+
+    case 54:
+        return '1';
+        break;
+
+    case 55:
+        return '2';
+        break;
+
+    case 56:
+        return '3';
+        break;
+
+    case 57:
+        return '4';
+        break;
+
+    case 58:
+        return '5';
+        break;
+
+    case 59:
+        return '6';
+        break;
+
+    case 60:
+        return '7';
+        break;
+
+    case 61:
+        return '8';
+        break;
+
+    case 62:
+        return '9';
+        break;
+
+    case 63:
+        return ' ';
+        break;
+
+    case 64:
+        return '!';
+        break;
+
+    case 65:
+        return '#';
+        break;
+
+    case 66:
+        return '%';
+        break;
+
+    case 67:
+        return '?';
+        break;
+
+    case 68:
+        return '@';
+        break;
+
+    case 69:
+        return '(';
+        break;
+
+    case 70:
+        return ')';
+        break;
+
+    case 71:
+        return '.';
+        break;
+
     default:
         return ' ';
         break;
     }
 }
+
+/* int mod(int input,int mod){
+    int output=0;
+    for(int i=0;i<=input;i++){
+        if(output>=mod){
+            output=1;
+        }else{
+            output++;
+        }
+    }
+    return output;
+} */
 
 void main() {
     //Variable Declaration
@@ -444,7 +608,7 @@ void main() {
     char outputString[STR_SIZE];
     int convertedString[STR_SIZE];
     int strLength;
-    int key[2][2]={2,1,1,1};
+    int key[2][2]={4,3,3,2};
     int plainText[2][STR_SIZE];
     int cipherText[2][STR_SIZE];
     int convertedText[STR_SIZE];
@@ -518,7 +682,7 @@ void main() {
     printf("\nThe converted 1D array is:\n");
     for (int i = 0; convertedText[i]!=0; i++)
     {
-        convertedText[i]= convertedText[i]%52;
+        convertedText[i]= convertedText[i]%71;
         printf("%d ",convertedText[i]);
     }
 
