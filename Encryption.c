@@ -590,18 +590,6 @@ int changeLetter(int letter){
     }
 }
 
-/* int mod(int input,int mod){
-    int output=0;
-    for(int i=0;i<=input;i++){
-        if(output>=mod){
-            output=1;
-        }else{
-            output++;
-        }
-    }
-    return output;
-} */
-
 void main() {
     //Variable Declaration
     char inputString[STR_SIZE];
